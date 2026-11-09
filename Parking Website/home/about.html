@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#151b1a" />
+  <title>About Us — Parkway</title>
+  <link rel="stylesheet" href="styles.css?v=team-profiles" />
+</head>
+<body class="about-page">
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Parkway home">
+      <span class="brand-mark">P</span>
+      <span>Parkway</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a class="nav-link" href="index.html#spots">Find parking</a>
+      <a class="nav-link" href="index.html#how">How it works</a>
+      <a class="nav-link" href="#">List a space</a>
+      <a class="nav-link active" href="about.html" aria-current="page">About the team</a>
+    </nav>
+    <a class="account-button" href="index.html">Back to Parkway</a>
+  </header>
+
+  <main>
+    <section class="about-hero">
+      <div>
+        <p class="eyebrow">The people behind Parkway</p>
+        <h1>Built by a team<br><span>moving cities forward.</span></h1>
+      </div>
+      <p>Meet the students bringing their experience in technology, research, and prototyping to Parkway.</p>
+    </section>
+
+    <section class="team-section">
+      <div class="team-heading">
+        <div>
+          <p class="eyebrow">Meet the team</p>
+          <h2>People of Parkway</h2>
+        </div>
+      </div>
+
+      <div class="profile-grid" id="profileGrid" aria-live="polite"></div>
+    </section>
+
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="about.js?v=team-profiles"></script>
+</body>
+</html>

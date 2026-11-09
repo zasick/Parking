@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#151b1a" />
+  <title>Parkway — Find parking near you</title>
+  <link rel="stylesheet" href="styles.css?v=team-profiles" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Parkway home">
+      <span class="brand-mark">P</span>
+      <span>Parkway</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a class="nav-link" href="#spots">Find parking</a>
+      <a class="nav-link" href="#how">How it works</a>
+      <a class="nav-link" href="#">List a space</a>
+      <a class="nav-link" href="about.html">About the team</a>
+    </nav>
+    <button class="account-button" type="button">Sign in</button>
+  </header>
+
+  <main>
+    <section class="search-panel">
+      <div class="intro-copy">
+        <p class="eyebrow">Parking made simpler</p>
+        <h1>Find a spot.<br><span>Skip the meters.</span></h1>
+        <p class="subhead">Discover reliable street and neighborhood parking across the city—even where there’s no meter in sight.</p>
+
+        <form class="search-bar" id="searchForm">
+          <label for="location">Where are you going?</label>
+          <div class="search-row">
+            <span class="search-icon" aria-hidden="true"></span>
+            <input id="location" name="location" value="Downtown, Seattle" autocomplete="off" />
+            <button type="submit">Search</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="filter-row" aria-label="Parking filters">
+        <button class="filter active" data-filter="all" type="button">All spots</button>
+        <button class="filter" data-filter="metered" type="button">Metered</button>
+        <button class="filter" data-filter="unmetered" type="button">No meter</button>
+        <button class="filter" data-filter="covered" type="button">Covered</button>
+        <button class="filter icon-filter" id="sortButton" type="button">Price: low to high</button>
+      </div>
+    </section>
+
+    <section class="results-layout" id="spots">
+      <aside class="results-panel">
+        <div class="results-heading">
+          <div>
+            <p class="eyebrow">Nearby spaces</p>
+            <h2><span id="spotCount">5</span> spots available</h2>
+          </div>
+          <button class="map-toggle" id="mapToggle" type="button">Map view</button>
+        </div>
+        <div class="spot-list" id="spotList"></div>
+      </aside>
+
+      <div class="map" aria-label="Stylized map showing available parking spots">
+        <div class="map-grid"></div>
+        <div class="road road-one"></div>
+        <div class="road road-two"></div>
+        <div class="road road-three"></div>
+        <div class="road road-four"></div>
+        <div class="map-marker current-marker"><span></span></div>
+        <button class="map-pin pin-one" type="button" data-id="1" aria-label="5th Avenue spot, $4 per hour"><strong>$4</strong></button>
+        <button class="map-pin pin-two" type="button" data-id="2" aria-label="Pike Street garage, $7 per hour"><strong>$7</strong></button>
+        <button class="map-pin pin-three" type="button" data-id="3" aria-label="Free curbside spot"><strong>Free</strong></button>
+        <button class="map-pin pin-four" type="button" data-id="4" aria-label="Union Street spot, $3 per hour"><strong>$3</strong></button>
+        <button class="map-pin pin-five" type="button" data-id="5" aria-label="Covered garage, $9 per hour"><strong>$9</strong></button>
+        <div class="map-label label-one">PIKE ST</div>
+        <div class="map-label label-two">5TH AVE</div>
+        <div class="map-label label-three">UNION ST</div>
+        <div class="map-card"><span class="pulse"></span> Best match nearby</div>
+      </div>
+    </section>
+
+    <section class="how" id="how">
+      <div>
+        <p class="eyebrow">A better way to park</p>
+        <h2>From search to space in minutes.</h2>
+      </div>
+      <ol>
+        <li><span>01</span><h3>Search your destination</h3><p>See nearby street, neighborhood, and garage options.</p></li>
+        <li><span>02</span><h3>Compare your spot</h3><p>Check distance, price, access, and parking type.</p></li>
+        <li><span>03</span><h3>Reserve with confidence</h3><p>Choose your arrival time and leave the circling to someone else.</p></li>
+      </ol>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
